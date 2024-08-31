@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="src/reset.css">
+    <link rel="stylesheet" href="src/style.css">
+    <link rel="shortcut icon" href="img/icon.png" type="img">
+    <title>CSV2JSON Converter</title>
+</head>
+<body>
+    <h1>CSV to JSON Converter</h1>
+    <div class="main">
+        <h3>Covert to JSON from CSV format</h3>
+        <p>Simply enter (or paste) your CSV data and push the '>' button. Additional configuration can be found at the bottom of the page.</p>
+        <div class="main-convert">
+            <div class="csv-main block">
+                <textarea name="csvfilecontent" id="csvfilecontent" placeholder="Paste (or enter) here..."></textarea>
+            </div>
+            <div class="block">
+                <button id="convertbtn">></button>
+            </div>
+            <div class="json-main block">
+                <textarea name="jsonfilecontent" id="jsonfilecontent" placeholder="Result goes here..."></textarea>
+            </div>
+        </div>
+        <div class="convert-control">
+            <div>
+                <label for="use-first-line-as-col-name">
+                    <input id="use_first_line_as_col_name" name="use-first-line-as-col-name" type="checkbox" checked>
+                    Use first line as a column name
+                </label>
+            </div>
+            <div>
+                <label for="trim-spaces">
+                    <input id="trim_spaces" name="trim-spaces" type="checkbox" checked>
+                    Trim spaces
+                </label>
+            </div>
+        </div>
+        <p id="errorlabel"></p>
+    </div>
+    <script src="src/script.js" type="module"></script>
+</body>
+</html>
